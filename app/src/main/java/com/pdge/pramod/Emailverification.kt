@@ -1,11 +1,11 @@
 package com.pdge.pramod
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class Emailverification : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.pdge.consultancy.R.layout.activity_emailverification)
+        setContentView(R.layout.activity_emailverification)
     }
 }

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.pdge.consultancy.databinding.FragmentHomeBinding
+import com.pdge.pramod.databinding.FragmentHomeBinding
 
 
 class HomeFragment : Fragment() {

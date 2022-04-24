@@ -11,8 +11,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.pdge.consultancy.R
-import com.pdge.consultancy.databinding.ActivityDashboardBinding
+import com.pdge.pramod.R
+import com.pdge.pramod.databinding.ActivityDashboardBinding
 
 
 class Dashboard : AppCompatActivity() {

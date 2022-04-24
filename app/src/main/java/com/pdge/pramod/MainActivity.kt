@@ -4,23 +4,24 @@ import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.pdge.consultancy.app.RetrofitClient
-import com.pdge.consultancy.model.DefaultResponse
-import com.pdge.consultancy.model.RegisterPost
+import androidx.databinding.DataBindingUtil
+import com.pdge.pramod.app.RetrofitClient
+import com.pdge.pramod.databinding.ActivityMainBinding
+import com.pdge.pramod.model.DefaultResponse
+import com.pdge.pramod.model.RegisterPost
 
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.editemail
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var activityMainBinding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        activityMainBinding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         title="Register"
 
-        buttonRegiter.setOnClickListener{
+        activityMainBinding.buttonRegiter.setOnClickListener{
             register()
         }
 
@@ -28,45 +29,45 @@ class MainActivity : AppCompatActivity() {
 
     private fun register() {
         val progressDialog = ProgressDialog(this@MainActivity)
-        val first_name = editname.text.toString().trim()
-        val last_name = editlast.text.toString().trim()
-        val gender = editgender.text.toString().trim()
-        val email = editemail.text.toString().trim()
-        val password = editPassword.text.toString().trim()
-        val number = editnumber.text.toString().trim()
-        val address = editaddress.text.toString().trim()
+        val first_name = activityMainBinding. editname.text.toString().trim()
+        val last_name = activityMainBinding.editlast.text.toString().trim()
+        val gender = activityMainBinding.editgender.text.toString().trim()
+        val email = activityMainBinding.editemail.text.toString().trim()
+        val password = activityMainBinding.editPassword.text.toString().trim()
+        val number = activityMainBinding.editnumber.text.toString().trim()
+        val address = activityMainBinding.editaddress.text.toString().trim()
         if (first_name.isEmpty()) {
-            editname.error = "First Name is Requied"
-            editname.requestFocus()
+            activityMainBinding.editname.error = "First Name is Requied"
+            activityMainBinding.editname.requestFocus()
             return
 
         }
 
         if (password.isEmpty()) {
-            editPassword.error = "Password is Required"
-            editPassword.requestFocus()
+            activityMainBinding.editPassword.error = "Password is Required"
+            activityMainBinding.editPassword.requestFocus()
             return
         }
 
         if (email.isEmpty()) {
-            editemail.error = "Email is Reqiued "
-            editemail.requestFocus()
+            activityMainBinding.editemail.error = "Email is Reqiued "
+            activityMainBinding. editemail.requestFocus()
             return
         }
 
         if (gender.isEmpty()) {
-            editgender.error = "Gender is Required"
-            editgender.requestFocus()
+            activityMainBinding.editgender.error = "Gender is Required"
+            activityMainBinding.editgender.requestFocus()
             return
         }
         if (number.isEmpty()) {
-            editnumber.error = " Mobile Number Required"
-            editnumber.requestFocus()
+            activityMainBinding.editnumber.error = " Mobile Number Required"
+            activityMainBinding.editnumber.requestFocus()
             return
         }
         if (address.isEmpty()) {
-            editaddress.error = "Address is Required"
-            editaddress.requestFocus()
+            activityMainBinding.editaddress.error = "Address is Required"
+            activityMainBinding.editaddress.requestFocus()
             return
         }
             progressDialog.setTitle("Login..")

@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/2022App/KotlinApp/consultancy/app/src/main/res/layout/activity_emailverification.xml" value="0.1" />
+        <entry key="..\:/2022App/KotlinApp/consultancy/app/src/main/res/layout/activity_forget_user.xml" value="0.1" />
+        <entry key="..\:/2022App/KotlinApp/consultancy/app/src/main/res/layout/activity_main.xml" value="0.10989583333333333" />
         <entry key="..\:/2022App/KotlinApp/consultancy/app/src/main/res/layout/app_bar_dashboard.xml" value="0.1" />
       </map>
     </option>

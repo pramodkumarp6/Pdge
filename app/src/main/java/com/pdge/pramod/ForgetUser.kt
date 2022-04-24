@@ -4,24 +4,24 @@ import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.pdge.consultancy.app.RetrofitClient
-import com.pdge.consultancy.model.ForgetPost
-import com.pdge.consultancy.model.ForgetUserResponse
-import com.pdge.consultancy.model.LoginPost
-import com.pdge.consultancy.model.LoginResponse
-import kotlinx.android.synthetic.main.activity_login.*
+import androidx.databinding.DataBindingUtil
+import com.pdge.pramod.app.RetrofitClient
+import com.pdge.pramod.databinding.ActivityForgetUserBinding
+import com.pdge.pramod.model.ForgetPost
+import com.pdge.pramod.model.ForgetUserResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class ForgetUser : AppCompatActivity() {
+    private lateinit var activityForgetUserBinding: ActivityForgetUserBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.pdge.consultancy.R.layout.activity_forget_user)
+        activityForgetUserBinding = DataBindingUtil.setContentView(this,R.layout.activity_forget_user)
         title="Account Forget"
 
 
-        buttonLogin.setOnClickListener{
+        activityForgetUserBinding.buttonLogin.setOnClickListener{
             forgetuser()
         }
 
@@ -29,11 +29,11 @@ class ForgetUser : AppCompatActivity() {
 
     private fun forgetuser() {
         val progressDialog = ProgressDialog(this@ForgetUser)
-        val email = editemail.text.toString().trim()
+        val email = activityForgetUserBinding.editemail.text.toString().trim()
 
         if(email.isEmpty()){
-            editemail.error="Required Email"
-            editemail.requestFocus()
+            activityForgetUserBinding.editemail.error="Required Email"
+            activityForgetUserBinding.editemail.requestFocus()
             return
 
         }
