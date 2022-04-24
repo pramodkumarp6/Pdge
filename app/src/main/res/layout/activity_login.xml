@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="loginViewModel"
+            type="com.pdge.pramod.viewmodel.LoginViewModel" />
 
     </data>
 
@@ -43,18 +46,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/input_Black"
-
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-
                 android:inputType="textEmailAddress"
                 android:background="@drawable/round"
+                android:text="@={loginViewModel.email}"
 
                 android:paddingLeft="5dp"
                 android:padding="10dp"
                 android:drawablePadding="5dp"
                 android:hint="Enter Email Address"
-
                 android:singleLine="true"
 
                 />
@@ -70,10 +71,9 @@
                 android:background="@drawable/round"
                 android:fontFamily="sans-serif"
                 android:hint="Enter Password"
+                android:text="@={loginViewModel.password}"
                 android:padding="10dp"
-
                 android:drawablePadding="5dp"
-
                 android:inputType="textPassword" />
 
             <Button

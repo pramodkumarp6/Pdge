@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+          <variable
+              name="registerViewModel"
+              type="com.pdge.pramod.viewmodel.RegisterViewModel" />
     </data>
 
     <RelativeLayout
@@ -41,62 +43,66 @@
                 android:id="@+id/editname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/input_Black"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:inputType="textPersonName"
                 android:background="@drawable/round"
-                android:paddingLeft="5dp"
-                android:padding="10dp"
                 android:drawablePadding="5dp"
                 android:hint="Enter FirstName "
-                android:singleLine="true" />
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:text="@={registerViewModel.name}"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/input_Black" />
 
             <EditText
                 android:id="@+id/editlast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/input_Black"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:inputType="textPersonName"
                 android:background="@drawable/round"
-                android:paddingLeft="5dp"
-                android:padding="10dp"
                 android:drawablePadding="5dp"
                 android:hint="Enter LastNmae"
-                android:singleLine="true" />
+                android:text="@={registerViewModel.lastName}"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/input_Black" />
 
             <EditText
                 android:id="@+id/editgender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/input_Black"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:inputType="textPersonName"
                 android:background="@drawable/round"
-                android:paddingLeft="5dp"
-                android:padding="10dp"
                 android:drawablePadding="5dp"
                 android:hint="Gender"
-                android:singleLine="true" />
+                android:text="@={registerViewModel.gender}"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/input_Black" />
 
 
             <EditText
                 android:id="@+id/editemail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/input_Black"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:inputType="textEmailAddress"
                 android:background="@drawable/round"
-                android:paddingLeft="5dp"
-                android:padding="10dp"
                 android:drawablePadding="5dp"
                 android:hint="Enter Email Address"
+                android:text="@={registerViewModel.email}"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:paddingLeft="5dp"
                 android:singleLine="true"
+                android:textColor="@color/input_Black"
 
 
                 />
@@ -107,45 +113,48 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:textColor="@color/input_Black"
-                android:paddingLeft="5dp"
                 android:background="@drawable/round"
+                android:drawablePadding="5dp"
                 android:fontFamily="sans-serif"
                 android:hint="Enter Password"
+                android:text="@={registerViewModel.password}"
+                android:inputType="textPassword"
                 android:padding="10dp"
-                android:drawablePadding="5dp"
-                android:inputType="textPassword" />
+                android:paddingLeft="5dp"
+                android:textColor="@color/input_Black" />
 
             <EditText
                 android:id="@+id/editnumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/input_Black"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:inputType="number"
                 android:background="@drawable/round"
-                android:paddingLeft="5dp"
-                android:padding="10dp"
                 android:drawablePadding="5dp"
                 android:hint="Mobile"
-                android:singleLine="true" />
+                android:text="@={registerViewModel.mobile}"
+                android:inputType="number"
+                android:padding="10dp"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/input_Black" />
 
 
             <EditText
                 android:id="@+id/editaddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/input_Black"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:inputType="textPersonName"
                 android:background="@drawable/round"
-                android:paddingLeft="5dp"
-                android:padding="10dp"
                 android:drawablePadding="5dp"
                 android:hint="Address"
-                android:singleLine="true" />
+                android:text="@={registerViewModel.address}"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/input_Black" />
 
             <Button
                 android:id="@+id/buttonRegiter"
@@ -153,8 +162,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:padding="10dp"
                 android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:onClick="@{()-> registerViewModel.onClickRegister()}"
                 android:text="REGISTER"
                 android:textColor="@color/colorWhite"
                 android:textSize="20dp" />
