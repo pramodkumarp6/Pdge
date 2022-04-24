@@ -5,20 +5,26 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import com.pdge.pramod.app.RetrofitClient
+import com.pdge.pramod.databinding.ActivityLoginBinding
 import com.pdge.pramod.databinding.ActivityMainBinding
 import com.pdge.pramod.model.DefaultResponse
 import com.pdge.pramod.model.RegisterPost
+import com.pdge.pramod.viewmodel.RegisterViewModel
 
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
+@Suppress("DEPRECATION")
 class RegisterActivity : AppCompatActivity() {
     private lateinit var activityMainBinding: ActivityMainBinding
+    private lateinit var registerViewModel: RegisterViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activityMainBinding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+        registerViewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
         title="Register"
 
         activityMainBinding.buttonRegiter.setOnClickListener{
