@@ -1,4 +1,4 @@
-package com.pdge.consultancy
+package com.pdge.pramod
 
 import android.app.ProgressDialog
 import android.content.Intent
@@ -91,7 +91,7 @@ class LoginActivity : AppCompatActivity() {
 
 
         textViewRegister1.setOnClickListener {
-            startActivity(Intent(this@LoginActivity, ForgetUser::class.java))
+            startActivity(Intent(this@LoginActivity, com.pdge.pramod.ForgetUser::class.java))
         }
 
 

@@ -1,6 +1,6 @@
-package com.pdge.consultancy.app
+package com.pdge.pramod.app
 
-import com.pdge.consultancy.ForgetUser
+import com.pdge.pramod.ForgetUser
 import com.pdge.consultancy.model.*
 import retrofit2.Call
 import retrofit2.http.*

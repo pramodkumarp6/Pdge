@@ -1,4 +1,4 @@
-package com.pdge.consultancy
+package com.pdge.pramod
 
 import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -17,7 +17,7 @@ import retrofit2.Response
 class ForgetUser : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_forget_user)
+        setContentView(com.pdge.consultancy.R.layout.activity_forget_user)
         title="Account Forget"
 
 

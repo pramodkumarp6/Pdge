@@ -1,4 +1,4 @@
-package com.pdge.consultancy.dash.ui.slideshow
+package com.pdge.pramod.dash.ui.slideshow
 
 import android.os.Bundle
 import android.view.LayoutInflater

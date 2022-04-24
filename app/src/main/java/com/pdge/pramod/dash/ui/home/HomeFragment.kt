@@ -1,4 +1,4 @@
-package com.pdge.consultancy.dash.ui.home
+package com.pdge.pramod.dash.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater

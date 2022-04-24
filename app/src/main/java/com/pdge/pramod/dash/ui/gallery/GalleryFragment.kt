@@ -1,4 +1,4 @@
-package com.pdge.consultancy.dash.ui.gallery
+package com.pdge.pramod.dash.ui.gallery
 
 import android.os.Bundle
 import android.view.LayoutInflater

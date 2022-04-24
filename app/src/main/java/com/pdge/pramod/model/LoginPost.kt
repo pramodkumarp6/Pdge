@@ -1,3 +1,3 @@
-package com.pdge.consultancy.model
+package com.pdge.pramod.model
 
  data class LoginPost (val email:String, val password:String)
