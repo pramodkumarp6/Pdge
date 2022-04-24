@@ -102,7 +102,7 @@ class LoginActivity : AppCompatActivity() {
 
 
         activityLoginBinding.textViewRegister1.setOnClickListener {
-            startActivity(Intent(this@LoginActivity, ForgetUser::class.java))
+            startActivity(Intent(this@LoginActivity, Dashboard::class.java))
         }
 
 
