@@ -14,7 +14,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
     private lateinit var activityMainBinding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun register() {
-        val progressDialog = ProgressDialog(this@MainActivity)
+        val progressDialog = ProgressDialog(this@RegisterActivity)
         val first_name = activityMainBinding. editname.text.toString().trim()
         val last_name = activityMainBinding.editlast.text.toString().trim()
         val gender = activityMainBinding.editgender.text.toString().trim()

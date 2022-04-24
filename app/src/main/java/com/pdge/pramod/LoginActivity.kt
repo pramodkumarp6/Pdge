@@ -1,6 +1,5 @@
 package com.pdge.pramod
 
-import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -74,7 +73,7 @@ class LoginActivity : AppCompatActivity() {
                             applicationContext,
                             response.body()?.message,
                             Toast.LENGTH_LONG
-                        ).show();
+                        ).show()
 
                         /* if(!response.body()?.error!!){
                             // val intent = Intent(applicationContext,ProfileActivity::class.java)
@@ -96,14 +95,14 @@ class LoginActivity : AppCompatActivity() {
 
 
         activityLoginBinding.textViewRegister2.setOnClickListener {
-            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+            startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
         }
 
 
 
 
         activityLoginBinding.textViewRegister1.setOnClickListener {
-            startActivity(Intent(this@LoginActivity, com.pdge.pramod.ForgetUser::class.java))
+            startActivity(Intent(this@LoginActivity, ForgetUser::class.java))
         }
 
 
